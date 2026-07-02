@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — Trusted Devs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="seal"></span>
+      TRUSTED DEVS
+    </a>
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="team.html" class="active">Team</a>
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="index.html#join">Discord</a>
+    </div>
+    <a href="index.html#join" class="nav-cta">Join server</a>
+  </div>
+</nav>
+
+<header class="team-hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> The people behind the server</div>
+    <h1>Meet the team</h1>
+    <p>Trusted Devs is run by a small management team responsible for vetting developers, reviewing projects, and keeping the community running. Discord usernames are listed under each member.</p>
+  </div>
+</header>
+
+<section class="tier" id="founder">
+  <div class="wrap">
+    <div class="tier-head"><h2>Founder</h2></div>
+    <div id="founder-slot"></div>
+  </div>
+</section>
+
+<section class="tier" id="head-of-management">
+  <div class="wrap">
+    <div class="tier-head"><h2>Head of Management</h2><span class="count" id="hom-count"></span></div>
+    <div class="grid-cards" id="hom-slot"></div>
+  </div>
+</section>
+
+<section class="tier" id="management">
+  <div class="wrap">
+    <div class="tier-head"><h2>Management Team</h2><span class="count" id="mgmt-count"></span></div>
+    <div class="grid-cards wide" id="mgmt-slot"></div>
+  </div>
+</section>
+
+<section id="join" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="cta-text">
+        <h3>Want to join the roster?</h3>
+        <p>Get verified in the Discord and start getting matched with real Roblox projects and investors.</p>
+      </div>
+      <a href="https://discord.gg/trusteddevs" target="_blank" rel="noopener" class="discord-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.076.076 0 0 0-.04.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.028ZM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.418 0 1.334-.955 2.419-2.157 2.419Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.418 0 1.334-.946 2.419-2.157 2.419Z"/></svg>
+        Join Trusted Devs
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand"><span class="seal" style="--s:16px;"></span> TRUSTED DEVS</div>
+    <div class="f-links">
+      <a href="index.html">About</a>
+      <a href="team.html">Team</a>
+      <a href="https://discord.gg/trusteddevs" target="_blank" rel="noopener">Discord</a>
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script>
+  // Founder — featured card
+  const f = TEAM.founder[0];
+  document.getElementById('founder-slot').innerHTML = `
+    <div class="founder-card">
+      ${avatarHTML(f, 110)}
+      <div>
+        <div class="member-name">${f.name} <span class="seal"></span></div>
+        <div class="member-role">${f.role}</div>
+        <div class="member-handle">${discordMark} @${f.handle}</div>
+        ${f.bio ? `<p class="member-bio">${f.bio}</p>` : ''}
+      </div>
+    </div>`;
+
+  // Head of Management
+  document.getElementById('hom-count').textContent = TEAM.headOfManagement.length;
+  document.getElementById('hom-slot').innerHTML = TEAM.headOfManagement.map(p => `
+    <div class="member-card">
+      ${avatarHTML(p, 72)}
+      <div class="member-name">${p.name} <span class="seal"></span></div>
+      <div class="member-role">${p.role}</div>
+      <div class="dc-chip">${discordMark} @${p.handle}</div>
+    </div>`).join('');
+
+  // Management Team
+  document.getElementById('mgmt-count').textContent = TEAM.management.length;
+  document.getElementById('mgmt-slot').innerHTML = TEAM.management.map(p => `
+    <div class="member-card">
+      ${avatarHTML(p, 64)}
+      <div class="member-name">${p.name} <span class="seal"></span></div>
+      <div class="member-role">${p.role}</div>
+      <div class="dc-chip">${discordMark} @${p.handle}</div>
+    </div>`).join('');
+</script>
+
+</body>
+</html>
