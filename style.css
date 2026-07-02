@@ -57,21 +57,14 @@ img{ max-width:100%; display:block; }
 /* ---------- hex seal, the signature mark ---------- */
 .seal{
   --s: 22px;
-  width:var(--s); height:calc(var(--s) * 1.1547);
-  position:relative;
-  display:inline-flex; align-items:center; justify-content:center;
+  width:var(--s); height:var(--s);
+  display:inline-block;
   flex-shrink:0;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background:linear-gradient(155deg, var(--accent), #2f3ad1);
+  background-image:url('verified.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
 }
-.seal::after{
-  content:"";
-  width:38%; height:60%;
-  border-left:2.5px solid #fff;
-  border-bottom:2.5px solid #fff;
-  transform:rotate(-45deg) translate(1px,-2px);
-}
-.seal.gold{ background:linear-gradient(155deg, var(--accent-2), #b6863a); }
 
 /* ---------- nav ---------- */
 .nav{
