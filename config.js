@@ -23,44 +23,37 @@ const DISCORD_INVITE = "https://discord.gg/trusteddevs"; // TODO: replace with y
 const TEAM = {
   founder: [
     {
-      name: "River Kade",
-      handle: "riverkade",
+      name: "kry2318",
+      handle: "kry2318",
       role: "Founder",
-      bio: "Started Trusted Devs to give serious Roblox developers a verified home base — and to give studios and investors a shortlist they can actually trust.",
-      avatar: "",
+      bio: "",
+      avatar: "kry.png",
       color: "#4d5bff"
     }
   ],
   headOfManagement: [
     {
-      name: "Sasha Voss",
-      handle: "sashav",
+      name: "raidz_zz",
+      handle: "raidz_zz",
       role: "Head of Management",
-      avatar: "",
+      avatar: "raidz.png",
       color: "#e0b15c"
-    },
-    {
-      name: "Milo Reyes",
-      handle: "miloreyes",
-      role: "Head of Management",
-      avatar: "",
-      color: "#3ecf8e"
     }
   ],
   management: [
-    { name: "Theo Lin",     handle: "theolin",     role: "Management Team", avatar: "", color: "#c96bd8" },
-    { name: "Ava Sinclair", handle: "avasinclair", role: "Management Team", avatar: "", color: "#4d9bff" },
-    { name: "Kai Osei",     handle: "kaiosei",     role: "Management Team", avatar: "", color: "#ff8a5c" },
-    { name: "Nova Price",   handle: "novaprice",   role: "Management Team", avatar: "", color: "#5cd9c6" },
-    { name: "Ezra Wolfe",   handle: "ezrawolfe",   role: "Management Team", avatar: "", color: "#d85c7a" },
-    { name: "Iris Cho",     handle: "iris.cho",    role: "Management Team", avatar: "", color: "#8a7cff" }
+    { name: "alert_bake", handle: "alert_bake", role: "Management Team", avatar: "", color: "#c96bd8" },
+    { name: "etrnldev",   handle: "etrnldev",   role: "Management Team", avatar: "", color: "#4d9bff" },
+    { name: "hiamlapa",   handle: "hiamlapa",   role: "Management Team", avatar: "", color: "#ff8a5c" },
+    { name: "tay54",      handle: "tay54",      role: "Management Team", avatar: "", color: "#5cd9c6" }
   ]
 };
 
 /* ---------- helpers used by both pages, no need to edit below ---------- */
 
 function initials(name){
-  return name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase();
+  const words = name.split(" ").filter(Boolean);
+  if(words.length === 1) return words[0].slice(0,2).toUpperCase();
+  return words.map(w => w[0]).join("").slice(0,2).toUpperCase();
 }
 
 function avatarHTML(person, size){
