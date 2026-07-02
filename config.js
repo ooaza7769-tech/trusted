@@ -42,7 +42,6 @@ const TEAM = {
   ],
   management: [
     { name: "alert_bake", handle: "alert_bake", role: "Management Team", avatar: "", color: "#c96bd8" },
-    { name: "etrnldev",   handle: "etrnldev",   role: "Management Team", avatar: "", color: "#4d9bff" },
     { name: "hiamlapa",   handle: "hiamlapa",   role: "Management Team", avatar: "", color: "#ff8a5c" },
     { name: "tay54",      handle: "tay54",      role: "Management Team", avatar: "", color: "#5cd9c6" }
   ]
