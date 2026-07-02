@@ -1,9 +1,9 @@
 /* ============================================================
-   EDIT ME — this is the only file you should need to touch.
+   EDIT ME - this is the only file you should need to touch.
    ============================================================
    1. DISCORD_INVITE
       Replace with your real, non-expiring invite link
-      (Server Settings → Invites → Create/Edit a permanent link).
+      (Server Settings -> Invites -> Create/Edit a permanent link).
    2. TEAM
       One entry per person. Fields:
         name      - display name
@@ -11,7 +11,7 @@
         role      - short role/title shown under the name
         bio       - (founder only) one or two sentences
         avatar    - URL to their Discord pfp. Easiest way to get it:
-                    right‑click their avatar in Discord → "Copy Avatar URL".
+                    right-click their avatar in Discord -> "Copy Avatar URL".
                     Leave blank ("") to fall back to a colored initial.
         color     - hex color used for the fallback initial avatar
    ============================================================ */
