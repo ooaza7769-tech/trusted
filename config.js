@@ -15,7 +15,7 @@
                     Leave blank ("") to fall back to a colored initial.
         color     - hex color used for the fallback initial avatar
    ============================================================ */
-const DISCORD_INVITE = "https://discord.gg/trusteddevs"; // TODO: replace with your real invite link
+const DISCORD_INVITE = "https://discord.gg/JzaUg9qeQ"; // TODO: replace with your real invite link
 const TEAM = {
   founder: [
     {
